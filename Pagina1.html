@@ -26,18 +26,18 @@ img {
     height: auto;
     margin-bottom: 30px;
 
-    mask-image: radial-gradient(
-        ellipse at center,
-        black 35%,
-        transparent 100%
-    );
+    -webkit-mask-image: 
+        linear-gradient(to right, transparent, black 15%, black 85%, transparent),
+        linear-gradient(to bottom, transparent, black 15%, black 85%, transparent);
 
-    -webkit-mask-image: radial-gradient(
-        ellipse at center,
-        black 35%,
-        transparent 100%
-    );
+    -webkit-mask-composite: destination-in;
+    mask-composite: intersect;
+
+    mask-image: 
+        linear-gradient(to right, transparent, black 15%, black 85%, transparent),
+        linear-gradient(to bottom, transparent, black 15%, black 85%, transparent);
 }
+
 
 
         button {
@@ -62,6 +62,7 @@ img {
 
 </body>
 </html>
+
 
 
 
