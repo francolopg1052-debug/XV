@@ -19,23 +19,30 @@
     background-repeat: no-repeat;
     font-family: Arial, sans-serif;
 }
-img {
+.contenedor-imagen {
+    position: relative;
     width: 90vw;
     max-width: 600px;
-    height: auto;
-    margin-bottom: 30px;
+}
 
-    -webkit-mask-image: radial-gradient(
+.contenedor-imagen img {
+    width: 100%;
+    display: block;
+}
+
+.contenedor-imagen::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+
+    background: radial-gradient(
         ellipse at center,
-        black 80%,
-        transparent 100%
+        transparent 75%,
+        rgba(0,0,0,0.4) 100%
     );
 
-    mask-image: radial-gradient(
-        ellipse at center,
-        black 80%,
-        transparent 100%
-    );
+    mix-blend-mode: multiply;
 }
 
         button {
@@ -52,7 +59,10 @@ img {
 
 <body>
 
+   <div class="contenedor-imagen">
     <img src="foto1.png" alt="Foto 1">
+</div>
+
 
     <a href="Pagina2.html">
         <button>Siguiente</button>
@@ -60,6 +70,7 @@ img {
 
 </body>
 </html>
+
 
 
 
