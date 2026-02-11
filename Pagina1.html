@@ -19,45 +19,24 @@
     background-repeat: no-repeat;
     font-family: Arial, sans-serif;
 }
-
 img {
     width: 90vw;
     max-width: 600px;
     height: auto;
     margin-bottom: 30px;
 
-    -webkit-mask-image: 
-        linear-gradient(to right, 
-            transparent 0%, 
-            black 8%, 
-            black 92%, 
-            transparent 100%
-        ),
-        linear-gradient(to bottom, 
-            transparent 0%, 
-            black 8%, 
-            black 92%, 
-            transparent 100%
-        );
+    -webkit-mask-image: radial-gradient(
+        ellipse at center,
+        black 80%,
+        transparent 100%
+    );
 
-    mask-image: 
-        linear-gradient(to right, 
-            transparent 0%, 
-            black 8%, 
-            black 92%, 
-            transparent 100%
-        ),
-        linear-gradient(to bottom, 
-            transparent 0%, 
-            black 8%, 
-            black 92%, 
-            transparent 100%
-        );
-
-    -webkit-mask-composite: destination-in;
-    mask-composite: intersect;
+    mask-image: radial-gradient(
+        ellipse at center,
+        black 80%,
+        transparent 100%
+    );
 }
-
 
 
         button {
@@ -82,6 +61,7 @@ img {
 
 </body>
 </html>
+
 
 
 
