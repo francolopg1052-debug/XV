@@ -19,28 +19,25 @@
     background-repeat: no-repeat;
     font-family: Arial, sans-serif;
 }
-.imagen-container {
-    position: relative;
+img {
     width: 90vw;
     max-width: 600px;
-}
+    height: auto;
+    margin-bottom: 30px;
 
-.imagen-container img {
-    width: 100%;
-    display: block;
-}
-
-.fade {
-    position: absolute;
-    inset: 0;
-    pointer-events: none;
-
-    background: radial-gradient(
+    -webkit-mask-image: radial-gradient(
         ellipse at center,
-        rgba(0,0,0,0) 75%,
-        rgba(255,255,255,0.6) 100%
+        black 80%,
+        transparent 100%
+    );
+
+    mask-image: radial-gradient(
+        ellipse at center,
+        black 80%,
+        transparent 100%
     );
 }
+
 
         button {
             padding: 12px 25px;
@@ -56,9 +53,8 @@
 
 <body>
 
-  <div class="imagen-container">
+  
     <img src="foto1.png" alt="Foto 1">
-    <div class="fade"></div>
 </div>
 
 
@@ -69,6 +65,7 @@
 
 </body>
 </html>
+
 
 
 
