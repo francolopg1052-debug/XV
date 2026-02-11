@@ -19,30 +19,27 @@
     background-repeat: no-repeat;
     font-family: Arial, sans-serif;
 }
-.contenedor-imagen {
+.imagen-container {
     position: relative;
     width: 90vw;
     max-width: 600px;
 }
 
-.contenedor-imagen img {
+.imagen-container img {
     width: 100%;
     display: block;
 }
 
-.contenedor-imagen::after {
-    content: "";
+.fade {
     position: absolute;
     inset: 0;
     pointer-events: none;
 
     background: radial-gradient(
         ellipse at center,
-        transparent 75%,
-        rgba(0,0,0,0.4) 100%
+        rgba(0,0,0,0) 75%,
+        rgba(0,0,0,0.5) 100%
     );
-
-    mix-blend-mode: multiply;
 }
 
         button {
@@ -59,9 +56,11 @@
 
 <body>
 
-   <div class="contenedor-imagen">
+  <div class="imagen-container">
     <img src="foto1.png" alt="Foto 1">
+    <div class="fade"></div>
 </div>
+
 
 
     <a href="Pagina2.html">
@@ -70,6 +69,7 @@
 
 </body>
 </html>
+
 
 
 
