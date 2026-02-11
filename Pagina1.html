@@ -25,20 +25,38 @@ img {
     height: auto;
     margin-bottom: 30px;
 
-    -webkit-mask-image: radial-gradient(
-        ellipse at center,
-        black 88%,
-        rgba(0,0,0,0.6) 94%,
-        transparent 100%
-    );
+    -webkit-mask-image:
+        linear-gradient(to right,
+            transparent 0%,
+            black 10%,
+            black 90%,
+            transparent 100%
+        ),
+        linear-gradient(to bottom,
+            transparent 0%,
+            black 10%,
+            black 90%,
+            transparent 100%
+        );
 
-    mask-image: radial-gradient(
-        ellipse at center,
-        black 88%,
-        rgba(0,0,0,0.6) 94%,
-        transparent 100%
-    );
+    mask-image:
+        linear-gradient(to right,
+            transparent 0%,
+            black 10%,
+            black 90%,
+            transparent 100%
+        ),
+        linear-gradient(to bottom,
+            transparent 0%,
+            black 10%,
+            black 90%,
+            transparent 100%
+        );
+
+    -webkit-mask-composite: destination-in;
+    mask-composite: intersect;
 }
+
 
         button {
             padding: 12px 25px;
@@ -62,6 +80,7 @@ img {
 
 </body>
 </html>
+
 
 
 
