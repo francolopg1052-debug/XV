@@ -19,11 +19,34 @@
     font-family: Arial, sans-serif;
 }
 
-        img {
-            max-width: 80%;
-            margin-bottom: 30px;
-        }
+img {
+    width: 90vw;
+    max-width: 600px;
+    height: auto;
+    margin-bottom: 30px;
 
+    -webkit-mask-image: radial-gradient(
+        ellipse at center,
+        black 40%,
+        rgba(0,0,0,0.8) 60%,
+        rgba(0,0,0,0.4) 80%,
+        transparent 100%
+    );
+
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-size: 100% 100%;
+
+    mask-image: radial-gradient(
+        ellipse at center,
+        black 40%,
+        rgba(0,0,0,0.8) 60%,
+        rgba(0,0,0,0.4) 80%,
+        transparent 100%
+    );
+
+    mask-repeat: no-repeat;
+    mask-size: 100% 100%;
+}
         button {
             padding: 12px 25px;
             font-size: 18px;
@@ -45,4 +68,5 @@
 
 </body>
 </html>
+
 
