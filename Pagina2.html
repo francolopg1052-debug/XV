@@ -19,10 +19,24 @@
     font-family: Arial, sans-serif;
 }
 
-        img {
-            max-width: 80%;
-            margin-bottom: 30px;
-        }
+      img {
+    width: 90vw;
+    max-width: 600px;
+    height: auto;
+    margin-bottom: 30px;
+
+    -webkit-mask-image: radial-gradient(
+        ellipse 100% 100% at center,
+        black 85%,
+        transparent 100%
+    );
+
+    mask-image: radial-gradient(
+        ellipse 100% 100% at center,
+        black 85%,
+        transparent 100%
+    );
+}
 
         button {
             padding: 12px 25px;
@@ -45,3 +59,4 @@
 
 </body>
 </html>
+
